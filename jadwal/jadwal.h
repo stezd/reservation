@@ -12,10 +12,12 @@ void tambahKeJadwal(const Reservasi &r);
 void urutkanJadwal();
 void tampilkanJadwal();
 
-class jadwal {
-
+class jadwalRuang {
+    std::vector<Reservasi> daftar;
+public:
+    void tambahReservasi(const Reservasi &r);
+    void urutkanReservasi();
+    void tampilkanReservasi() const;
 };
-
-
 
 #endif //JADWAL_H
