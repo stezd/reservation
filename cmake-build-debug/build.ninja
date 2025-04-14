@@ -55,6 +55,18 @@ build CMakeFiles/reservation.dir/main.cpp.obj: CXX_COMPILER__reservation_unscann
   OBJECT_DIR = CMakeFiles\reservation.dir
   OBJECT_FILE_DIR = CMakeFiles\reservation.dir
 
+build CMakeFiles/reservation.dir/jadwal/jadwal.cpp.obj: CXX_COMPILER__reservation_unscanned_Debug C$:/Users/LENOVO/Documents/PROJECTS/reservation/jadwal/jadwal.cpp || cmake_object_order_depends_target_reservation
+  DEP_FILE = CMakeFiles\reservation.dir\jadwal\jadwal.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\reservation.dir
+  OBJECT_FILE_DIR = CMakeFiles\reservation.dir\jadwal
+
+build CMakeFiles/reservation.dir/reservasi/reservasi.cpp.obj: CXX_COMPILER__reservation_unscanned_Debug C$:/Users/LENOVO/Documents/PROJECTS/reservation/reservasi/reservasi.cpp || cmake_object_order_depends_target_reservation
+  DEP_FILE = CMakeFiles\reservation.dir\reservasi\reservasi.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\reservation.dir
+  OBJECT_FILE_DIR = CMakeFiles\reservation.dir\reservasi
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target reservation
@@ -63,7 +75,7 @@ build CMakeFiles/reservation.dir/main.cpp.obj: CXX_COMPILER__reservation_unscann
 #############################################
 # Link the executable reservation.exe
 
-build reservation.exe: CXX_EXECUTABLE_LINKER__reservation_Debug CMakeFiles/reservation.dir/main.cpp.obj
+build reservation.exe: CXX_EXECUTABLE_LINKER__reservation_Debug CMakeFiles/reservation.dir/main.cpp.obj CMakeFiles/reservation.dir/jadwal/jadwal.cpp.obj CMakeFiles/reservation.dir/reservasi/reservasi.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\reservation.dir
