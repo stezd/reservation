@@ -10,7 +10,6 @@ void queueReservasi::tambahReservasi(const Reservasi &r) {
     std::cout << "Reservasi untuk " << r.getId() << " telah ditambahkan ke antrian.\n";
 }
 
-
 Reservasi queueReservasi::prosesReservasi() {
     if (!antrianKosong()) {
         Reservasi r = antrian.front();

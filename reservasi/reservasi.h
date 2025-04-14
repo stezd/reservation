@@ -36,6 +36,12 @@ public:
     [[nodiscard]] std::string getId() const {
         return id;
     }
+    [[nodiscard]] std::string getTanggal() const {
+        return tanggal;
+    }
+    [[nodiscard]] std::string getJamMulai() const {
+        return jamMulai;
+    }
 };
 
 #endif //RESERVASI_H
