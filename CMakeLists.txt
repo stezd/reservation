@@ -6,5 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(reservation main.cpp
         jadwal/jadwal.cpp
         jadwal/jadwal.h
-        reservasi/reservasi.cpp
-        reservasi/reservasi.h)
+        reservasi/reservasi.h
+        reservasi/queueReservasi.cpp
+        reservasi/queueReservasi.h)

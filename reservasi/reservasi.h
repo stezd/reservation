@@ -5,22 +5,37 @@
 #ifndef RESERVASI_H
 #define RESERVASI_H
 
+#include <iostream>
 #include <string>
+#include <utility>
 using namespace std;
 
 class Reservasi {
-    string nama;
-    string id;
-    string ruangan;
-    string tanggal;
-    string jamMulai;
-    string jamSelesai;
+    std::string nama;
+    std::string id;
+    std::string ruangan;
+    std::string tanggal;
+    std::string jamMulai;
+    std::string jamSelesai;
 public:
-    Reservasi(const std::string& n, const std::string& i, const std::string& r,
-              const std::string& t, const std::string& jm, const std::string& js)
-        : nama(n), id(i), ruangan(r), tanggal(t), jamMulai(jm), jamSelesai(js) {}
-    void tampilkan() const;
-    string getId() const;
+    // Constructor
+    Reservasi(std::string  n, std::string  i, std::string  r,
+              std::string  t, std::string  jm, std::string  js)
+        : nama(std::move(n)), id(std::move(i)), ruangan(std::move(r)), tanggal(std::move(t)), jamMulai(std::move(jm)), jamSelesai(std::move(js)) {}
+
+    // Menampilkan informasi reservasi
+    void tampilkan() const {
+        std::cout << "Nama: " << nama << "\n"
+                  << "ID: " << id << "\n"
+                  << "Ruangan: " << ruangan << "\n"
+                  << "Tanggal: " << tanggal << "\n"
+                  << "Jam: " << jamMulai << " - " << jamSelesai << "\n";
+    }
+
+    // Getter untuk ID
+    [[nodiscard]] std::string getId() const {
+        return id;
+    }
 };
 
 #endif //RESERVASI_H
